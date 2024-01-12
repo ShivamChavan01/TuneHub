@@ -1,0 +1,60 @@
+/* Reset some default styles */
+body, h1, h2, p, a {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Helvetica', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    background-image: url('https://wallpaperaccess.com/full/768656.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* Ensure the background covers the entire viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    max-width: 400px;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+a {
+    text-decoration: none;
+    color: #3498db;
+    font-weight: bold;
+    display: block;
+    margin: 20px 0;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a:hover {
+    background-color: #3498db;
+    color: white;
+}
+
+a[href="login"] {
+    background-color: #e74c3c;
+}
+
+a[href="registration"] {
+    background-color: #27ae60;
+}
+
+a[href="login"]:hover {
+    background-color: orange;
+}
+
+a[href="registration"]:hover {
+    background-color: orange;
+}

@@ -1,41 +1,73 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<meta charset="UTF-8">
+<title>Playlist</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9; /* Light gray background color */
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    th, td {
+        padding: 10px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    th {
+        background-color: #f2f2f2; /* Light gray background color for table header */
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        margin-bottom: 10px;
+    }
+
+    audio {
+        width: 100%;
+    }
+
+    .icon {
+        margin-right: 5px;
+    }
+</style>
 </head>
 <body>
-
-
-
-	<table border>
-		<thead>
-
-			<tr>
-				<th>Name</th>
-				<th>Songs</th>
-
-
-			</tr>
-		</thead>
-
-		<tbody>
-
-			<tr th:each="plist:${allPlaylists}">
-				<td th:text="${plist.name}"></td>
-				<td>
-					<ul>
-						<li th:each="song :${plist.songs}">
-						<span th:text="${song.name}"></span> 
-						<audio controls>
-							<source th:src="${song.link}" type="audio/mpeg">
-						</audio>
-						</li>
-					</ul>
-				</td>
-			</tr>
-
-		</tbody>
-	</table>
+<table border>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Songs</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="plist:${allPlaylists}">
+            <td th:text="${plist.name}"></td>
+            <td>
+                <ul>
+                    <li th:each="song :${plist.songs}">
+                        <i class="fas fa-music icon"></i><span th:text="${song.name}"></span>
+                        <audio controls>
+                            <source th:src="${song.link}" type="audio/mpeg">
+                        </audio>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+    </tbody>
+</table>
 </body>
 </html>

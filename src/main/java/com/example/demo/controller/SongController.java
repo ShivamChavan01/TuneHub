@@ -17,13 +17,13 @@ import com.example.demo.services.SongService;
 public class SongController {
 	
 	@Autowired
-	SongService service;
+	SongService songService;
 	
 	@PostMapping("/addSong")
 	public String addSong(@ModelAttribute Song song) {
-		boolean songStatus = service.songExists(song.getName());
+		boolean songStatus = songService.songExists(song.getName());
 		if(songStatus==false) {
-			service.addSong(song);
+			songService.addSong(song);
 			System.out.println("Song added succesfully");
 			
 		}else {
@@ -35,7 +35,7 @@ public class SongController {
 	
 	@GetMapping("/viewSongs")
 	public String viewSongs(Model model) {
-		List<Song> songLists=service.fetchAllSongs();
+		List<Song> songLists=songService.fetchAllSongs();
 		model.addAttribute("songs", songLists);
 		return "displaySongs";
 	}
@@ -45,7 +45,7 @@ public class SongController {
 	public String playSongs( Model model) {
 		boolean premiumUser=true;
 		if(premiumUser==true) {
-			List<Song> songsLists=service.fetchAllSongs();
+			List<Song> songsLists=songService.fetchAllSongs();
 	         model.addAttribute("songs", songsLists);
 			
 			return "displaySongs";

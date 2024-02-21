@@ -1,43 +1,157 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<meta charset="UTF-8">
+<title>User Registration</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<style>
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9e1e0; /* Light pink background color */
+    background-image:url("https://www.toptal.com/designers/subtlepatterns/uploads/pink_rice.png");
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  h1 {
+    text-align: center;
+    color: #4a7ba6; /* Blue header color */
+    margin-bottom: 20px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 10px;
+    color: #4a7ba6; /* Blue label color */
+    font-weight: bold;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  textarea {
+    width: calc(100% - 24px);
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+
+  input[type="radio"] {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+  }
+
+  input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #4a7ba6; /* Blue button color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #346192; /* Darker blue on hover */
+  }
+
+  .icon {
+    margin-right: 10px;
+  }
+
+  .footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #666;
+  }
+
+  .form-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .form-row label {
+    flex: 1;
+    margin-right: 20px;
+  }
+
+  .form-row input[type="text"],
+  .form-row input[type="email"],
+  .form-row input[type="password"],
+  .form-row textarea {
+    flex: 2;
+  }
+</style>
 </head>
 <body>
 
+<form action="register" method="post">
+  <h1>User Registration</h1>
 
-<form action="register"  method="post">
-<label>User name : </label>
-<input type = "text" name = "username"  placeholder="Enter Your Name"/>
-<br>
-
-<label>Email : </label>
-<input type = "email" name = "email"    placeholder="Enter Your Email"/>
-<br>
-
-<label>Password : </label>
-<input type = "password"
-name = "password"     placeholder="Enter Your Password"/>
-<br>
-
-<label>Gender : </label>
-M<input type = "radio" name = "gender" value = "male" />
-F<input type = "radio" name = "gender" value = "female" />
-0<input type = "radio" name = "gender" value = "other" />
-<br>
-
-<label>Role : </label>
-  Admin<input type = "radio" name = "role" value = "admin" />
-  Customer<input type = "radio" name = "role" value = "customer"/>
-<br>
-
-<Label>Address : </label>
-<textarea name = "address"></textarea>
-<br>
-<input type="submit" />
+  
+    <label for="username"><i class="fas fa-user icon"></i>User Name:</label>
+    <input type="text" id="username" name="username" placeholder="Enter your name" required>
 
 
+  
+    <label for="email"><i class="fas fa-envelope icon"></i>Email:</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+  
+
+  
+    <label for="password"><i class="fas fa-lock icon"></i>Password:</label>
+    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+ 
+
+  <div class="form-row">
+    <label><i class="fas fa-venus-mars icon"></i>Gender:</label>
+    <input type="radio" id="male" name="gender" value="male" required>
+    <label for="male">Male</label>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label>
+    <input type="radio" id="other" name="gender" value="other">
+    <label for="other">Other</label>
+  </div>
+
+  <div class="form-row">
+    <label><i class="fas fa-user-tag icon"></i>Role:</label>
+    <input type="radio" id="admin" name="role" value="admin" required>
+    <label for="admin">Admin</label>
+    <input type="radio" id="customer" name="role" value="customer">
+    <label for="customer">Customer</label>
+  </div>
+
+  
+    <label for="address"><i class="fas fa-map-marker-alt icon"></i>Address:</label>
+    <textarea id="address" name="address" placeholder="Enter your address"></textarea>
+  
+
+
+  <input type="submit" value="Register">
+  
+
+  <p class="footer">Already have an account? <a href="login" >Login here</a></p>
 </form>
 
 </body>

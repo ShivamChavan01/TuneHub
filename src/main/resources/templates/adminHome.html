@@ -2,18 +2,58 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Admin Home Page</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f9e1e0; /* Light pink background color */
+        padding: 20px;
+    }
+
+    h1 {
+        color: #4a7ba6; /* Blue header color */
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .menu {
+        list-style-type: none;
+        padding: 0;
+        text-align: center;
+    }
+
+    .menu li {
+        margin-bottom: 10px;
+    }
+
+    .menu li a {
+        display: inline-block;
+        padding: 15px 40px;
+        background-color: #eea990; /* Light orange background color */
+        color: #333; /* Dark text color */
+        text-decoration: none;
+        border-radius: 30px;
+        transition: background-color 0.3s ease;
+    }
+
+    .menu li a:hover {
+        background-color: #feadb9; /* Light pink background color on hover */
+    }
+
+    .menu li a i {
+        margin-right: 10px;
+    }
+</style>
 </head>
 <body>
-<h1>AdminHomePage</h1>
+<h1>Welcome to the Admin Panel</h1>
 
-<a href="newSong"> Add a new song</a>
-<br>
-<a href="viewSongs"> View All Songs</a>
-<br>
-<a href="createPlaylist"> Add Playlist</a>
-<br>
-<a href="viewPlaylists"> View all The  Playlists</a>
-<br>
+<ul class="menu">
+    <li><a href="newSong"><i class="fas fa-music"></i> Add a New Song</a></li>
+    <li><a href="viewSongs"><i class="fas fa-list"></i> View All Songs</a></li>
+    <li><a href="createPlaylist"><i class="fas fa-plus-circle"></i> Add Playlist</a></li>
+    <li><a href="viewPlaylists"><i class="fas fa-play-circle"></i> View All Playlists</a></li>
+</ul>
 </body>
 </html>

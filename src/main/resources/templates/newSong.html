@@ -1,36 +1,93 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<meta charset="UTF-8">
+<title>Add Song</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(225, 201, 203); /* Mixed RGB color */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  form {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-image: url('https://www.toptal.com/designers/subtlepatterns/patterns/dark_embroidery.png');
+  }
+
+  label {
+    display: block;
+    margin-bottom: 10px;
+    color: #66545e;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+
+  input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #4a7ba6;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #346192;
+  }
+
+  .icon {
+    margin-right: 10px;
+  }
+
+  .bg-pattern {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.2;
+    background-image: url('https://www.toptal.com/designers/subtlepatterns/patterns/debut_dark.png');
+  }
+</style>
 </head>
 <body>
 
-
 <form action="addSong" method="post">
+  <div class="bg-pattern"></div>
+  <label for="name"><i class="fas fa-music icon"></i>Song Name:</label>
+  <input type="text" id="name" name="name" placeholder="Enter the song name">
 
-<label>Song name: </label>
-<input type="text" name ="name"/>
-<br>
+  <label for="artist"><i class="fas fa-user icon"></i>Artist:</label>
+  <input type="text" id="artist" name="artist" placeholder="Enter the artist name">
 
-<label>Song artist: </label>
-<input type="text" name ="artist"/>
-<br>
+  <label for="genre"><i class="fas fa-music icon"></i>Genre:</label>
+  <input type="text" id="genre" name="genre" placeholder="Enter the genre">
 
+  <label for="link"><i class="fas fa-link icon"></i>Song Link:</label>
+  <input type="text" id="link" name="link" placeholder="Enter the song link">
 
-<label>Song genre: </label>
-<input type="text" name ="genre"/>
-<br>
-
-
-<label>Song link: </label>
-<input type="text" name ="link"/>
-<br>
-
-<input type="submit" value="ADD SONG">
-
-
+  <input type="submit" value="ADD SONG">
 </form>
+
 </body>
 </html>
-

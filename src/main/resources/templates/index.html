@@ -1,17 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta charset="ISO-8859-1">
-<title>Insert  here</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Registration</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
-<link rel="stylesheet"  th:href="@{/css/style.css}">
-
 <body>
 
-<br>
-<br>
+<div class="container">
+ <img src="/img/indexImage.png" alt="Your PNG Image">
+   
+    <h1>Welcome To TuneHub🎶</h1>
+    <div class="button-container">
+        <a th:href="@{/login}" class="button"><i class="fas fa-sign-in-alt"></i> Login</a>
+        <a th:href="@{/registration}" class="button"><i class="fas fa-user-plus"></i> Register</a>
+    </div>
+</div>
 
-<a href="login">LOGIN</a>
-<a href="registration">REGISTER</a>
 </body>
 </html>

@@ -1,27 +1,95 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f9e1e0;
+        background-image:url("https://www.toptal.com/designers/subtlepatterns/uploads/email-pattern.png");
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+   
+    
+    .div1{
+      background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        width: 300px;
+    
+    }
+    label {
+        font-weight: bold;
+        margin-bottom: 5px;
+        display: block;
+        color: #66545e; /* Darker color from the palette */
+    }
+    input[type="email"],
+    input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+    input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        background-color: #4a7ba6;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    input[type="submit"]:hover {
+        background-color: #346192;
+    }
+    .illustration {
+        display: block;
+        margin: 0 auto 20px;
+        width: 200px; /* Adjust the width as needed */
+        height: auto;
+    }
+    h2 {
+        font-size: 20px;
+        font-weight: bold;
+        color: #bc85e3; /* Adjusted color to match the palette */
+        text-align: center;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Adding a text shadow */
+        padding: 10px; /* Adding padding for better spacing */
+       
+        border-radius: 15px; /* Adding border radius for rounded corners */
+    }
+</style>
 </head>
 <body>
+<div class="div1">
+<img src="img/undraw_Party_re_nmwj.png" alt="Happy Feeling" class="illustration">
+<div> 
+
 <form action="validate" method="post">
-
-
-<label>Email : </label>
-<input type = "email" name = "email"    placeholder="Enter Your Email"/>
-<br>
-
-<label>Password : </label>
-<input type = "password"
-name = "password"     placeholder="Enter Your Password"/>
-<br>
-
-
-<input type="submit" value="LOGIN">
-
-
+    <h2><i class="fas fa-quote-left fa-2x fa-pull-left"></i>Your playlist adventure begins with a simple login. Let's go!"</h2>
+    <label for="email"><i class=" fas fa-solid fa-envelope-open-text"></i> Email:</label>
+    <input type="email" id="email" name="email" placeholder="Enter Your Email" required>
+    <br>
+    <label for="password"> <i class="fas fa-solid fa-lock"></i> Password:</label>
+    <input type="password" id="password" name="password" placeholder="Enter Your Password" required>
+    <br>
+    <input type="submit" value="LOGIN">
 </form>
+</div>
+</div>
 
 </body>
 </html>

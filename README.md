@@ -40,3 +40,6 @@ Once the application is set up and running, users can:
 - Browse through a vast library of music content.
 - Enjoy premium access features if subscribed.
 - Stream music seamlessly and enjoy an immersive listening experience.
+
+##  click on the below link for the snapshots
+https://github.com/ShivamChavan01/TuneHub/wiki

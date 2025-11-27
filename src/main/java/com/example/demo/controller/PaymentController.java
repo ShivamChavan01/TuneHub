@@ -47,7 +47,7 @@ public class PaymentController {
 	@ResponseBody
 	public String createOrder() {
 
-		int  amount  = 5000;
+		int  amount  = 50;
 		Order order=null;
 		try {
 			RazorpayClient razorpay=new RazorpayClient("rzp_test_QtPDGpUwjKBlU0", "4JNWm3jGKnvwaZ1po3i3Mnd9");
@@ -87,4 +87,5 @@ public class PaymentController {
 	        return false;
 	    }
 	}
+
 }
